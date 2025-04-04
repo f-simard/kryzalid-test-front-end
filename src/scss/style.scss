@@ -1,0 +1,27 @@
+@use './utils/reset';
+
+@import url('https://fonts.googleapis.com/css2?family=Aleo:wght@400;500;600;700&family=DM+Sans:wght@400;500;600;700&display=swap');
+
+
+:root {
+  --bgColor: #EAEAE8;
+  --textColor: #1B2437;
+  --primaryFont: 'DM Sans', Arial, sans-serif;
+  --secondaryFont: 'Aleo', Arial, sans-serif;
+  --container-margin: 10vw;
+}
+
+body {
+  font-family: var(--primaryFont);
+  background: var(--bgColor);
+  color: var(--textColor);
+  font-size: 1.4rem;
+}
+
+.container {
+  margin-top: 100px;
+  margin-right: auto;
+  margin-left: auto;
+  padding-left: var(--container-margin);
+  padding-right: var(--container-margin);
+}
