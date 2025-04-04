@@ -1,24 +1,109 @@
-<h1>Kryzalid Test</h1>
-<p>Dans le cadre d'un éventuel recrutement voici le petit test qu'il sera demander de réaliser. On veut surtout se faire une idée sur l'étendu de te compétences en terme d'intégration, dynamisation ainsi que ta rapidité d'exécution.</p>
-<p><strong>Temps à prévoir : environ 2h</strong> On ne veut pas que tu passes ta journée dessus, simplement faire le maximum possible dans ce temps prévu.</p>
-<p>On est conscient que 2h c'est peut être short pour tout faire, donc pas de pression si il manque des choses.</p>
-<p>Objectif: Réaliser une page web de liste de nouvelles en suivant les recommandation de la maquette.Avec des données qui proviennent d'une API.</p>
-<ul>
-    <li>
-        La liste doit être ordonné par date du plus récent au plus vieux.
-    </li>
-    <li>
-        Le page doit être responsive au mieux.
-    </li>
-    <li>
-        La liste peut être filtré par catégorie pour ne laisser afficher que les nouvelles correspondante.
-    </li>
-</ul>
+<div class="readme">
+    <h1>💼 Kryzalid Test</h1>
+    <p>Dans le cadre d’un éventuel recrutement, voici un petit test que nous te proposons de réaliser. L'objectif est d'évaluer l’étendue de tes compétences en termes d’intégration, dynamisation et rapidité d’exécution.</p>
 
-<h2>
-    Choix de technologie: 
-</h2>
-<p>Le projet inclut un environnement de développement prêt à l’emploi, similaire à celui que tu pourrais retrouver chez Kryzalid. Il est là pour te faire gagner du temps de configuration : tu peux l’utiliser tel quel et te concentrer uniquement sur le développement.</p>
-<p>
-    Cependant, si tu préfères travailler avec ta propre stack ou adapter l’environnement, libre à toi de le faire ! Dans ce cas, merci simplement de nous expliquer clairement comment faire tourner ton projet (installation, compilation, lancement, etc.).
-</p>
+    <p><strong>Temps à prévoir :</strong> environ <strong>2h</strong> — pas besoin d’y passer la journée, l’idée est simplement de faire le <em>maximum</em> possible dans ce laps de temps.</p>
+
+    <p><em>On sait que 2h, c’est peut-être court pour tout faire, donc ne t'inquiète pas si certaines choses restent incomplètes.</em></p>
+
+    <h2>🎯 Objectif</h2>
+    <p>Créer une page web affichant une <strong>liste de nouvelles</strong> à partir de données fournies par une API, en suivant les recommandations de la maquette.</p>
+    <ul>
+        <li>Les nouvelles doivent être triées du plus récent au plus ancien.</li>
+        <li>La page doit être responsive.</li>
+        <li>Il doit être possible de filtrer les nouvelles par <strong>catégorie</strong>.</li>
+    </ul>
+
+    <h2>🗂️ Choix de technologie</h2>
+    <p>Un environnement de développement prêt à l’emploi est fourni, similaire à celui utilisé chez Kryzalid. Tu peux l’utiliser tel quel, ou bien adapter le tout à ta propre stack si tu le préfères. Dans ce cas, merci de bien expliquer comment lancer ton projet.</p>
+
+    <h2>✅ Bon à savoir</h2>
+    <p>Tu trouveras la maquette ici :</p>
+    <ul>
+        <li><a href="https://www.figma.com/design/QU93dmh7VexxXU8tZRrK0q/Test-RH-Dev?node-id=1-373" target="_blank">Lien Figma</a></li>
+        <li>Ou en version PDF dans les <code>assets</code> du projet</li>
+    </ul>
+    <p>Les polices à utiliser :</p>
+    <ul>
+        <li><strong>Aleo</strong> : pour le titre "Nouvelles"</li>
+        <li><strong>DM Sans</strong> : pour les items de nouvelles</li>
+    </ul>
+
+    <pre><code>@import url('https://fonts.googleapis.com/css2?family=Aleo:wght@400;500;600;700&family=DM+Sans:wght@400;500;600;700&display=swap');
+
+    $primaryFont: 'Aleo', Arial, sans-serif;
+    $secondaryFont: 'DM Sans', Arial, sans-serif;
+    </code></pre>
+
+    <h2>⚙️ Installation de l’environnement</h2>
+    <p>Assure-toi d’avoir <code>Node.js</code> et <code>npm</code> installés.</p>
+
+    <h3>✨ Fonctionnalités incluses :</h3>
+    <ul>
+        <li>Support SCSS (Sass)</li>
+        <li>Templates HTML via Twig</li>
+        <li>JavaScript natif libre</li>
+        <li>API locale via <code>json-server</code></li>
+    </ul>
+
+    <h3>🗂️ Structure du projet</h3>
+    <pre><code>src/
+    ├── scss/                   → Tes fichiers Sass
+    ├── templates/              → Fichiers Twig
+    │   └── partials/           → Composants réutilisables
+    ├── images/                 → Images pour la maquette
+    ├── compile.js              → Fichier de compilation (à ne pas modifier)
+    ├── db.json                 → Contenu de la fake API
+    ├── maquette-Nouvelles.pdf  → Export PDF de la maquette
+    </code></pre>
+
+    <h3>▶️ Lancer le projet</h3>
+    <pre><code>npm install
+    npm run start
+    </code></pre>
+    <p>Ce script :</p>
+    <ul>
+        <li>Lance un serveur web local sur <a href="http://127.0.0.1:8080" target="_blank">127.0.0.1:8080</a></li>
+        <li>Démarre une API locale sur <a href="http://localhost:4000" target="_blank">localhost:4000</a></li>
+    </ul>
+
+    <h2>🔌 API à connecter</h2>
+    <p>L’API simulée (via <code>json-server</code>) fournit une centaine d’articles fictifs accessibles via :</p>
+    <pre><code>GET /posts</code></pre>
+    <p>Chaque article possède : <code>id</code>, <code>title</code>, <code>intro</code>, <code>date</code>, <code>thumbnail</code>, <code>category</code>, etc.</p>
+
+    <p>👉 <a href="https://www.npmjs.com/package/json-server" target="_blank">Voir la doc officielle</a></p>
+
+    <h2>📋 Récapitulatif</h2>
+    <h3>🎨 Intégration & expérience utilisateur</h3>
+    <ul>
+        <li>Code clair, structuré et commenté si besoin</li>
+        <li>Intégration fidèle à la maquette</li>
+        <li>Responsive et fluide sur tous les écrans</li>
+        <li>Données récupérées dynamiquement via l’API</li>
+    </ul>
+
+    <h3>🎯 Bonus (si le temps le permet)</h3>
+    <ul>
+        <li>Filtre par catégories fonctionnel</li>
+        <li>Animations ou micro-interactions pertinentes</li>
+    </ul>
+
+    <h3>💤 Moins prioritaire</h3>
+    <ul>
+        <li>Pagination (optionnelle mais appréciée)</li>
+    </ul>
+
+    <h2>🚀 Rendu du test</h2>
+    <p>Une fois terminé, envoie-nous :</p>
+    <ul>
+        <li>Une archive <code>.zip</code> du projet</li>
+        <li>OU un lien vers un dépôt Git (GitHub, GitLab, etc.)</li>
+    </ul>
+
+    <p>Ce test vise à comprendre ta façon de travailler, ton organisation et ta capacité à livrer un résultat propre.</p>
+    <p><em>Il n’est pas chronométré, mais peut être complété en quelques heures. Priorise ce que tu juges le plus important.</em></p>
+
+    <h2>🎉 Have fun et bonne réalisation 🤘</h2>
+    <p>On a hâte de voir ce que tu vas produire !</p>
+</div>

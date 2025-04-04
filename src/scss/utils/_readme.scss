@@ -1,0 +1,26 @@
+.readme{
+    h1, h2, h3 {
+        margin: 1.5rem 0;
+        font-family: var(--secondaryFont), serif;
+    }
+    h1 {
+    font-size: 4rem;
+    }
+    code {
+    background: #eee;
+    padding: 2px 4px;
+    border-radius: 4px;
+    }
+    pre {
+    background: #eee;
+    padding: 1rem;
+    border-radius: 6px;
+    overflow-x: auto;
+    }
+    a {
+    color: #007acc;
+    }
+    ul {
+        padding-left: 1.5rem;
+    }
+}

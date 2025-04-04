@@ -24,7 +24,7 @@ Cependant, si tu préfères travailler avec ta propre stack ou adapter l’envir
 ## ✅ Bon à savoir
 
 Tu trouveras la maquette complète via le template figma ici présent: 
-https://www.figma.com/file/QU93dmh7VexxXU8tZRrK0q/Untitled?node-id=1%3A220 ou alors en pdf dans les assets du site. le mode view Dev te guidera dans les styles à appliquer 
+(https://www.figma.com/design/QU93dmh7VexxXU8tZRrK0q/Test-RH-Dev?node-id=1-373)[lien du Figma] ou alors en pdf dans les assets du site. le mode view Dev te guidera dans les styles à appliquer 
 
 Pour la font tu peux utiliser les Googles fonts suivant: 
 **Aleo** : Pour le titre "Nouvelles"
@@ -47,11 +47,13 @@ Ce projet inclut un environnement de développement prêt à l’emploi, conçu 
 ### 🗂️ Architecture du projet 
 ```java
 src/
-├── scss/             → Tes fichiers Sass
-├── templates/        → Tes fichiers Twig (structure HTML)
-│   └── partials/     → Éventuels composants réutilisables (.twig)
-├── compile.js        → Fichier de compilation (ne pas modifier)
-├── db.json           → Contenu de la "fake API"
+├── scss/                   → Tes fichiers Sass
+├── templates/              → Tes fichiers Twig (structure HTML)
+│   └── partials/           → Éventuels composants réutilisables (.twig)
+├── images/                 → Quelques images utiles pour la pages
+├── compile.js              → Fichier de compilation (ne pas modifier)
+├── db.json                 → Contenu de la "fake API"
+├── maquette-Nouvelles.pdf  → Export de la maquette Figma
 ```
 
 ### ▶️ Lancement du projet
@@ -112,3 +114,4 @@ Ce test a pour objectif de mieux comprendre ta manière de travailler, ton sens 
 Ce n’est pas un test chronométré, mais il est conçu pour pouvoir être réalisé dans une journée. On sait que tout n’est pas forcément faisable en 1 ou 2 heures, donc priorise ce que tu juges le plus pertinent.
 
 ### Have fun et bonne réalisation 🤘 !
+Au plaisir de découvrir ton travail !
