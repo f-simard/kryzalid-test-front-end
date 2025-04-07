@@ -6,9 +6,13 @@
         <link rel="stylesheet" href="./css/style.css">
     </head>
     <body>
-	    {% include 'partials/header.twig' %}
         <div class="container">
-            {% include 'partials/news-card.twig' %}
+			<section>
+			{% include 'partials/header.twig' %}
+			<div class="news">
+            	{% include 'partials/news-card.twig' %}
+			<div>
+			</section>
         </div>
 
         {% include 'partials/footer.twig' %}

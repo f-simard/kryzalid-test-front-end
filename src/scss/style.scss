@@ -1,29 +1,46 @@
-@use './utils/reset';
-@use './utils/readme';
-@use './components/news-card';
+@use "./utils/reset";
+@use "./utils/readme";
+@use "./components/news";
+@use "./components/news-card";
 
-@import url('https://fonts.googleapis.com/css2?family=Aleo:wght@400;500;600;700&family=DM+Sans:wght@400;500;600;700&display=swap');
-
+@import url("https://fonts.googleapis.com/css2?family=Aleo:wght@400;500;600;700&family=DM+Sans:wght@400;500;600;700&display=swap");
 
 :root {
-  --bgColor: #EAEAE8;
-  --textColor: #1B2437;
-  --primaryFont: 'DM Sans', Arial, sans-serif;
-  --secondaryFont: 'Aleo', Arial, sans-serif;
-  --container-margin: 10vw;
+	--bgColor: #eaeae8;
+	--textColor: #1b2437;
+	--white: white;
+	--blue: #1b1b3a;
+
+	--primaryFont: "DM Sans", Arial, sans-serif;
+	--secondaryFont: "Aleo", Arial, sans-serif;
+	--container-margin: 10vw;
+
+	font-family: var(--dm-sans);
+	font-size: 16px;
+
+	--h1: 400 4rem/1.2 var(--secondaryFont);
+	--h2: 400 1.7rem/1.1 var(--primaryFont);
+	--current: 400 1.25rem/1.2 var(--primaryFont);
+	--small: 400 1rem/1.2 var(--dm-sans);
+
+	@media (min-width: 1024px) {
+		--h1: 400 4rem/1.2 var(--secondaryFont);
+		--h2: 400 1.7rem/1.1 var(--primaryFont);
+		--current: 400 1.25rem/1.2 var(--primaryFont);
+		--small: 400 1rem/1.2 var(--dm-sans);
+	}
 }
 
 body {
-  font-family: var(--primaryFont);
-  background: var(--bgColor);
-  color: var(--textColor);
-  font-size: 1.4rem;
+	font-family: var(--primaryFont);
+	background: var(--bgColor);
+	color: var(--textColor);
 }
 
 .container {
-  margin-top: 100px;
-  margin-right: auto;
-  margin-left: auto;
-  padding-left: var(--container-margin);
-  padding-right: var(--container-margin);
+	margin-top: 100px;
+	margin-right: auto;
+	margin-left: auto;
+	padding-left: var(--container-margin);
+	padding-right: var(--container-margin);
 }
