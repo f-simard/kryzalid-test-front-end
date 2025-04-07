@@ -1,0 +1,12 @@
+<template id="newsTemplate">
+	<article class="news-card">
+		<header>
+			<h2 data-news="title">{{news.title}}</h2>
+			<div><span data-news="date">{{new.date}}</span> | <span data-news="category">{{news.category}}<span></div>
+		</header>
+		<p data-news="intro">{{news.intro}}</p>
+		<figure>
+			<img data-news="thumbnail" src="{{news.thumbnail}}" alt="">
+		</figure>
+	</article>
+</template>
