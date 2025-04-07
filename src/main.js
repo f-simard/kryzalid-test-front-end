@@ -15,6 +15,12 @@ document.addEventListener("DOMContentLoaded", function () {
 			console.log("Posts récupérés:", posts);
 			console.log("Categories récupérées:", categories);
 
+			posts.sort((a, b) => {
+				const dateA = new Date(a.date);
+				const dateB = new Date(b.date);
+				return dateB - dateA;
+			});
+
 			renderHeader(categories);
 			renderNews(posts, categories);
 		})
@@ -25,25 +31,25 @@ document.addEventListener("DOMContentLoaded", function () {
 			);
 		});
 
-		const formHTML = document.querySelector("form");
-		formHTML.addEventListener("submit", function(event){
-			event.preventDefault();
-		})
+	const formHTML = document.querySelector("form");
+	formHTML.addEventListener("submit", function (event) {
+		event.preventDefault();
+	});
 });
 
 function renderHeader(categories) {
 	const selectHTML = document.querySelector("select");
 
-	selectHTML.innerHTML= "";
+	selectHTML.innerHTML = "";
 
-	categories.forEach((cat)=>{
+	categories.forEach((cat) => {
 		const option = document.createElement("option");
 		option.value = cat.id;
 		option.text = cat.name;
 		option.selected = false;
 
-		selectHTML.appendChild(option)
-	})
+		selectHTML.appendChild(option);
+	});
 }
 
 function renderNews(news, categories) {
